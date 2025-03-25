@@ -5,7 +5,7 @@ from app.utils import salvar_tempos_json
 if __name__ == "__main__":
     # === Listas pequenas ===
     tempos_seq_peq, tempos_par_peq, nomes_peq = executar_testes_em_pasta(
-        "listas_pequenas"
+        "listas_pequenas", "fork_join"
     )
 
     gerar_boxplot(
@@ -20,7 +20,7 @@ if __name__ == "__main__":
 
     # === Listas grandes ===
     tempos_seq_grd, tempos_par_grd, nomes_grd = executar_testes_em_pasta(
-        "listas_grandes"
+        "listas_grandes", "fork_join"
     )
 
     gerar_boxplot(
