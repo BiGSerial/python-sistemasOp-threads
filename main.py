@@ -3,6 +3,9 @@ from app.graficos import gerar_boxplot
 from app.utils import salvar_tempos_json
 
 if __name__ == "__main__":
+    print("=== Iniciando execução dos testes ===")
+
+    print("\n-> Processando listas pequenas...")
     # === Listas pequenas ===
     tempos_seq_peq, tempos_par_peq, nomes_peq = executar_testes_em_pasta(
         "listas_pequenas", "fork_join"
@@ -17,7 +20,9 @@ if __name__ == "__main__":
     )
 
     salvar_tempos_json(tempos_seq_peq, tempos_par_peq, "tempos_pequenas.json")
+    print("Listas pequenas processadas com sucesso!")
 
+    print("\n-> Processando listas grandes...")
     # === Listas grandes ===
     tempos_seq_grd, tempos_par_grd, nomes_grd = executar_testes_em_pasta(
         "listas_grandes", "fork_join"
@@ -32,3 +37,6 @@ if __name__ == "__main__":
     )
 
     salvar_tempos_json(tempos_seq_grd, tempos_par_grd, "tempos_grandes.json")
+    print("Listas grandes processadas com sucesso!")
+
+    print("\n=== Execução finalizada com sucesso! ===")
